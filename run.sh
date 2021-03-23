@@ -56,3 +56,12 @@ startbbrplus(){
 }
 
 startbbrplus
+
+yum install squid httpd-tools -y
+/bin/rm -f /etc/squid/squid.conf
+/usr/bin/touch /etc/squid/blacklist.acl
+/usr/bin/wget --no-check-certificate -O /etc/squid/squid.conf https://raw.githubusercontent.com/TrLOX/CreatProxyWithBBR/main/squid.conf
+systemctl enable squid
+systemctl restart squid
+firewall-cmd --zone=public --permanent --add-port=3128/tcp
+firewall-cmd --reload
