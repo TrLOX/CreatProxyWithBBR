@@ -8,3 +8,4 @@ wget -N --no-check-certificate "https://raw.githubusercontent.com/TrLOX/CreatPro
 sudo /usr/bin/htpasswd -b -c /etc/squid/passwd USERNAME_HERE PASSWORD_HERE
 sudo systemctl reload squid
 ````
+Proxy ip:3128:USERNAME_HERE:PASSWORD_HERE
