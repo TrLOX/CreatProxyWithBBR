@@ -57,6 +57,7 @@ startbbrplus(){
 
 startbbrplus
 
+apt update
 apt install -y squid
 /bin/rm -f /etc/squid/squid.conf
 /usr/bin/touch /etc/squid/blacklist.acl
